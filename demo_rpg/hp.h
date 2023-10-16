@@ -9,7 +9,7 @@ public:
 	bool setMaxHP(hptype new_max_hp) { //changes maxHP to new maxHP
 
 		if (new_max_hp < 1) { //returns if new_max_hp is less than 1, not allowed
-			return;
+			return 0;
 		}
 		else {
 			MaxHP = new_max_hp; //sets maxhp to the newmaxhp

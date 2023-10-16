@@ -1,11 +1,12 @@
 #pragma once
 #include "stattypes.h"
 
-struct StatBlock {
-
+class StatBlock {
+	
 	stattype Strength; // 0xFF
 	stattype Intellect; // oxFF
 
+public:
 	StatBlock() {
 		Strength = static_cast<stattype>(1u);
 		Intellect = static_cast<stattype>(1u);
@@ -15,5 +16,9 @@ struct StatBlock {
 		Strength = s;
 		Intellect = i;
 	}
+
+	stattype getStrength() { return Strength; }
+	stattype getIntellect() { return Intellect; }
+
 	
 };
