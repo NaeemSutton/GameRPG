@@ -4,6 +4,7 @@
 class hp {
 public:
 
+
 	//return true if set successfully
 	bool setMaxHP(hptype new_max_hp) { //changes maxHP to new maxHP
 
@@ -49,6 +50,23 @@ public:
 		CurrentHP += amount; //heals your current hp based on amount of heal
 	}
 
+
+	hp() { //constructor
+		CurrentHP = 1;
+		MaxHP = 1;
+	}
+
+	hp(hptype cHP, hptype mHP) { //constructor to set values
+		CurrentHP = cHP;
+		MaxHP = mHP;
+
+		if (CurrentHP > MaxHP) {
+
+			CurrentHP = MaxHP;
+		}
+
+	}
+		 
 
 	
 
