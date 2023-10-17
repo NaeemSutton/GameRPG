@@ -2,7 +2,7 @@
 #pragma once
 #include "hp.h"
 #include "statblock.h"
-class cleric : public hp, public StatBlock {
+class cleric : public hp, public StatBlock, public LevelSystem {
 public:
 
 	static const hptype HPGROWTH = static_cast<hptype>(14u);
